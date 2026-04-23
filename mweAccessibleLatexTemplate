@@ -1,0 +1,44 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Minimal Working Example of an accessible LaTeX template.           %%%%%
+%%%%% Ensure you have TeXLive 2025+ and are compiling with LuaLaTeX.     %%%%%
+%%%%% Author: Kris Hollingsworth, PhD                                    %%%%%
+%%%%% Original Date: 4/23/2026                                           %%%%%
+%%%%% More feature-rich templates also available on my GitHub at         %%%%%
+%%%%% github.com/DoctorHaitch                                            %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Automatic tagging and document class
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DocumentMetadata{
+  tagging=on,
+  pdfstandard=ua-2,
+  lang=en-US,
+  testphase={phase-III,math, table} % Required for improved structure support
+}
+\documentclass[12pt,a4paper]{article}
+\tagpdfsetup{table/header-rows={1}} % Set default header to 1st row of tables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Metadata and hyperref
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[
+  pdfauthor={<Document Author>},
+  pdftitle={<Document Title>}
+]{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Layout and formatting packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tabularx,float,tikz}
+\usepackage[
+  includehead,
+  left=0.5in, right=0.5in,
+  top=0.75in, bottom=0.75in,
+  headheight=13.6pt
+]{geometry}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{An accessible template.}
+
+  Place your document body here.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
