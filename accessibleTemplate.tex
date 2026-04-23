@@ -1,0 +1,81 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                                                                    %%%%%
+%%%%% My preferred starting accessible LaTeX template.                   %%%%%
+%%%%% Includes fancyvrb for code and starting math packages.             %%%%%
+%%%%% Ensure you have TeXLive 2025+ and are compiling with LuaLaTeX.     %%%%%
+%%%%% Author: Kris Hollingsworth, PhD                                    %%%%%
+%%%%% Original Date: 4/23/2026                                           %%%%%
+%%%%% More feature-rich templates also available on my GitHub at         %%%%%
+%%%%% github.com/DoctorHaitch                                            %%%%%
+%%%%%                                                                    %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Automatic tagging and document class
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DocumentMetadata{
+  tagging=on,
+  pdfstandard=ua-2,
+  lang=en-US,
+  testphase={phase-III,math,table} % Required for improved structure support
+}
+\documentclass[12pt,a4paper]{article}
+\tagpdfsetup{table/header-rows={1}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Color definitions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{xcolor}
+
+%% ColorBrewer Set2 (colorblind-friendly, soft palette)
+\definecolor{cbTeal}{HTML}{66C2A5}
+\definecolor{cbOrange}{HTML}{FC8D62}
+\definecolor{cbPurple}{HTML}{8DA0CB}
+\definecolor{cbPink}{HTML}{E78AC3}
+\definecolor{cbGreen}{HTML}{A6D854}
+\definecolor{cbYellow}{HTML}{FFD92F}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Metadata and hyperref
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[
+  pdfauthor={Kris Hollingsworth, PhD},
+  pdftitle={<Document Title>},
+  colorlinks=true,
+  linkcolor=cbTeal!60!black,
+  citecolor=cbTeal!60!black,
+  urlcolor=cbPurple!70!black
+]{hyperref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Mathematics packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{unicode-math}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Layout and formatting packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multicol,tabularx,array,float,tikz}
+\usepackage[
+  includehead,
+  left=0.5in, right=0.5in,
+  top=0.75in, bottom=0.75in,
+  headheight=13.6pt
+]{geometry}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Verbatim and code
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyvrb}
+\fvset{
+  numbers=left,
+  stepnumber=1,
+  numbersep=3pt,
+  frame=single
+}
+%% Fix line numbering size above 7pt for accessibility. Default size is tiny.
+\renewcommand{\theFancyVerbLine}{\footnotesize\arabic{FancyVerbLine}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Some section title}
+Some body text.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
