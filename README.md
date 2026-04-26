@@ -7,9 +7,9 @@
 ---
 
 ## Table of Contents
-- Introduction
-- Software Requirements
-- Document Requirements
+- [Introduction](#introduction)
+- [Software Requirements](#software-requirements)
+- [Document Requirements](#document-requirements)
   - Automatically Tagging Your PDF
   - Heading Structure
   - Floating Elements
