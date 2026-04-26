@@ -66,8 +66,8 @@ Compliance Deadline: April 24, 2027 (Recently extended from the original 2026 de
     ]{hyperref}
 
 Note:
-- \title{} and \author{} do not set PDF metadata  
-- hyperref is required for this.
+- ```\title{}``` and ```\author{}``` do not set PDF metadata  
+- ```hyperref``` is required for this.
 
 ---
 
