@@ -1,0 +1,110 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%                                                                    %%%%%
+%%%%% Sample Exam using accessibleexam.cls                               %%%%%
+%%%%% Includes math and tikz diagram as examples.                        %%%%%
+%%%%% Author: Kris Hollingsworth, PhD                                    %%%%%
+%%%%% Original Date: 4/25/2026                                           %%%%%
+%%%%%                                                                    %%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\DocumentMetadata{
+  tagging=on,
+  pdfstandard=ua-2,
+  lang=en-US,
+  testphase={phase-III,math,table}
+}
+\documentclass{accessibleexam}
+%%%%%%%%%%%%%%%%%%%% Required for PDF File Metadata.
+\usepackage[
+  pdfauthor={Kris Hollingsworth, PhD},
+  pdftitle={Exam X: Title of Exam}
+]{hyperref}
+%%%%%%%%%%%%%%%%%%%% Document Macros
+\course{MATHXXX: The Best Math Course}
+\exam{Exam X: The Best Math Exam}
+\examdateval{February 30th, 2026}
+\setinstructions{The best exam instructions go here.}
+%=======================================================================================================================
+%%% Load Custom Packages
+\RequirePackage{tikz, pgfplots}
+\RequirePackage{array}
+\pgfplotsset{compat=1.18}
+\usepgfplotslibrary{fillbetween}
+%=======================================================================================================================
+\begin{document}
+%=======================================================================================================================
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%% Cover Page
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Give points per page as comma separated list. Will build grade table and automatically place point total per page in footer.
+\makeexamcover{5,10,20}
+%=======================================================================================================================
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% Page 1
+%%%%%%%%%%%%%%%%%%%%%%%%
+\question[2]{Please compute the following sums.}
+
+\begin{enumerate}
+  \item 
+  $2+2 = $
+\vfill
+  \item 
+  $\pi + e = $
+\vfill
+\end{enumerate}
+
+\question[3]{Define a linear function.}
+\vfill
+%=======================================================================================================================
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% Page 2
+%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\question[10]{All your base are belong to us.}
+
+%=======================================================================================================================
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% Page 3
+%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\question[20]{Consider the following linear function.}
+
+{\centering
+\begin{tikzpicture}[alt={The best linear function.}]
+\begin{axis}[
+    xmin=-.5,xmax=3.5,
+    ymin=-3.5,ymax=3.5,
+    grid=major,
+    xtick={-10,-9,...,10},
+    ytick={-5,-4,...,5},
+    grid style={line width=.1pt, draw=gray!10},
+    major grid style={line width=.2pt,draw=gray!20},
+    axis lines=middle,
+    enlargelimits={abs=0.5},
+    legend style={at={(.85,1)}, anchor=north west},
+    axis line style={latex-latex},
+  height=.3\textwidth,
+  width=.8\textwidth
+]
+\addplot [
+    name path=line,
+    very thick,
+    domain=0:3, 
+    samples=2, 
+    color=blue,
+]
+{x+1} node[above,pos=.5,rotate=15] {y=x+1};
+\addlegendentry{\(x+1\)}
+\end{axis}
+\end{tikzpicture}\par}
+
+\begin{enumerate}
+  \item What is the slope of the linear function?
+  \vfill
+  \item What is the $y$-intercept of the function?
+  \vfill
+  \item What is the $x$-intercept of the function?
+  \vfill
+  \vfill
+\end{enumerate}
+\end{document}
