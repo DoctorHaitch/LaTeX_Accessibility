@@ -10,15 +10,15 @@
 - [Introduction](#introduction)
 - [Software Requirements](#software-requirements)
 - [Document Requirements](#document-requirements)
-  - Automatically Tagging Your PDF
-  - Heading Structure
-  - Floating Elements
-  - Tables
-  - Images and Alt Text
-  - Codeblocks
-- Known Problematic Packages
-- Summary
-- List of Class Files
+  - [Automatically Tagging Your PDF](#automatically-tagging-your-pdf)
+  - [Heading Structure](#heading-structure)
+  - [Floating Elements](#floating-elements)
+  - [Tables](#tables)
+  - [Images and Alt Text](#images-and-alt-text)
+  - [Codeblocks](#codeblocks)
+- [Known Problematic Packages](#known-problematic-packages)
+- [Summary](#summary)
+- [List of Class Files](#list-of-class-files)
 ---
 
 ## Introduction
