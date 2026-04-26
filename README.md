@@ -10,9 +10,15 @@
 - Introduction
 - Software Requirements
 - Document Requirements
-- Summary and Minimal Template
-- Repository
-
+  - Automatically Tagging Your PDF
+  - Heading Structure
+  - Floating Elements
+  - Tables
+  - Images and Alt Text
+  - Codeblocks
+- Known Problematic Packages
+- Summary
+- List of Class Files
 ---
 
 ## Introduction
@@ -37,8 +43,8 @@ Compliance Deadline: April 24, 2027 (Recently extended from the original 2026 de
 
 ## Software Requirements
 
-- TeX Live 2025+
-- LuaLaTeX compiler
+- [TeX Live 2025+](https://www.tug.org/texlive/)
+- [LuaLaTeX compiler](https://www.luatex.org/)
 
 ---
 
@@ -165,3 +171,7 @@ The following is a useful replacement of the ```listings``` package, which compl
 
 - Many incompatibilities do not cause compilation errors but instead result in degraded reading order or incomplete tagging.
 - Always validate output using a PDF accessibility checker when possible. I recommend the list view in Adobe Acrobat for documents created in LaTeX, as the visual density of tags can become overwhelming with labels, links, math, and other technical environments each creating their own tags.
+
+## List of Class Files
+
+In Progress: accessibleexam.cls, an exam template designed to meet PDF/UA compliance.
